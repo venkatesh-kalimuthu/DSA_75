@@ -13,7 +13,6 @@ Returns the list so we can add the current word in one line.
  
 | Method | What it returns | Returns... |
 
-| :--- | :--- | :--- |
 
 | `map.values()` | All the values | `Collection<V>` |
 
@@ -34,5 +33,11 @@ map.forEach((key, value) -> {
     System.out.println("Key: " + key + " Value: " + value); 
 
 });
+
+ 
+get(key) is very fast O(1).
+containsKey(key) is very fast O(1).
+containsValue(value) is slow O(N) because Java has to look through every single item to find it.
+ 
 
  
