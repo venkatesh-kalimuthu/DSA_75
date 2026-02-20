@@ -4,7 +4,7 @@ String.valueOf(count):   Converts the raw counts into a unique String ID.   This
 
 computeIfAbsent:       
 
-Checks if a group (list) already exists for a fingerprint.
+Checks if a group (list) already exists for a key.
 If not, it creates a new ArrayList on the fly.
 Returns the list so we can add the current word in one line.
    
