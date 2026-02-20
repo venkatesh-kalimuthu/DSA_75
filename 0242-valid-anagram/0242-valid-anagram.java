@@ -24,7 +24,7 @@ public class ValidAnagram {
 
         for (int i = 0; i < s.length(); i++) {
 
-            char c = s.charAt(i);
+            char c = s.charAt(i);                                         //char c = Character.toLowerCase(s.charAt(i));
 
             countMap.put(c, countMap.getOrDefault(c, 0) + 1);
 
@@ -34,7 +34,7 @@ public class ValidAnagram {
 
         for (int i = 0; i < t.length(); i++) {
 
-            char c = t.charAt(i);
+            char c = t.charAt(i);                                         //char c = Character.toLowerCase(s.charAt(i));
 
             Integer currentCount = countMap.get(c);
  
