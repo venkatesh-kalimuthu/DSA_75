@@ -40,7 +40,7 @@ public class TopKFrequentElements {
         // Convert List<Integer> to int[]
         int[] topK = new int[k];
         for (int i = 0; i < k; i++) {
-            topK[i] = result.get(i);
+            topK[i] = result.get(i);    // ArrayList can be accessed via index ...!
         }
  
         return topK;
