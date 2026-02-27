@@ -12,4 +12,6 @@ to summarize:
 You declare an array to hold references to List objects: List<Integer>[] buckets = new List[size];.
 For each position in that array where you intend to store elements, you must create an actual, concrete List object: buckets[i] = new ArrayList<>();.
 You cannot create a new List<>() because List is an interface.
+
+**Also, we can't store null in int[] so we are using result ArrayList while iterating the buckets
  
