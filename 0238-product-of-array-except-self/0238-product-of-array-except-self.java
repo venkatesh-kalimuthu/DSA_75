@@ -1,23 +1,34 @@
-class Solution {
-    public int[] productExceptSelf(int[] nums) {
-        int n = nums.length;
-        int[] answer = new int[n];
- 
-        // Pass 1: Calculate the product of all elements to the LEFT of index i
-        int leftProduct = 1;
-        for (int i = 0; i < n; i++) {
-            answer[i] = leftProduct;
-            leftProduct *= nums[i];
+public class ValidPalindrome {
+    public static boolean isPalindrome(String s) {
+        // Step 1: Initialize two pointers
+        int left = 0, right = s.length() - 1;
+
+        // Step 2: Traverse the string from both ends
+        while (left < right) {
+            // Skip non-alphanumeric characters on the left
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
+                left++;
+            }
+            // Skip non-alphanumeric characters on the right
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
+                right--;
+            }
+
+            // Compare characters
+            if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {
+                return false;
+            }
+
+            // Move both pointers inward
+            left++;
+            right--;
         }
- 
-        // Pass 2: Calculate the product of all elements to the RIGHT of index i
-        // and multiply it with the existing left product in the answer array
-        int rightProduct = 1;
-        for (int i = n - 1; i >= 0; i--) {
-            answer[i] *= rightProduct;
-            rightProduct *= nums[i];
-        }
- 
-        return answer;
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        String s = "A man, a plan, a canal: Panama";
+        System.out.println(isPalindrome(s));
     }
 }
